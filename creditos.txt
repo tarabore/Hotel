@@ -1,0 +1,4 @@
+Este proyecto debe ser utilizado solo con fines educativos.
+
+Para realizarlo se tomó como base el proyecto de Reserva de Hotel perteneciente a Juan Carlos Arcila Díaz disponible en https://www.youtube.com/watch?v=JP6rzu92cbA&list=PLZPrWDz1Molokkqn7yqb8l4kfiSo8MxXv
+

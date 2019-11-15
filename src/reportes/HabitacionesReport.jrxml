@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="rpHabitaciones" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="19ceac43-739d-4d75-9053-d409669fa143">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT
+     habitacion.`idhabitacion` AS habitacion_idhabitacion,
+     habitacion.`numero` AS habitacion_numero,
+     habitacion.`piso` AS habitacion_piso,
+     habitacion.`descripcion` AS habitacion_descripcion,
+     habitacion.`caracteristicas` AS habitacion_caracteristicas,
+     habitacion.`precio_diario` AS habitacion_precio_diario,
+     habitacion.`estado` AS habitacion_estado,
+     habitacion.`tipo_habitacion` AS habitacion_tipo_habitacion
+FROM
+     `habitacion` habitacion]]>
+	</queryString>
+	<field name="habitacion_idhabitacion" class="java.lang.Integer"/>
+	<field name="habitacion_numero" class="java.lang.String"/>
+	<field name="habitacion_piso" class="java.lang.String"/>
+	<field name="habitacion_descripcion" class="java.lang.String"/>
+	<field name="habitacion_caracteristicas" class="java.lang.String"/>
+	<field name="habitacion_precio_diario" class="java.math.BigDecimal"/>
+	<field name="habitacion_estado" class="java.lang.String"/>
+	<field name="habitacion_tipo_habitacion" class="java.lang.String"/>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699" uuid="f39a7e1a-8586-4106-b72b-170c7a4ff798"/>
+				<staticText>
+					<reportElement x="20" y="20" width="234" height="43" forecolor="#FFFFFF" uuid="a01c9a44-5467-4a4a-8cc1-3c04cf55ba3b"/>
+					<textElement>
+						<font size="34" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Hotel Paraíso]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="395" y="43" width="180" height="20" forecolor="#FFFFFF" uuid="8b7fd03f-1a76-4938-a9d2-b1d335dd135a"/>
+					<textElement textAlignment="Right">
+						<font size="14" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Listado de Habitaciones]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="26">
+			<line>
+				<reportElement x="-20" y="20" width="595" height="1" forecolor="#666666" uuid="18b80b51-30f9-450c-a9e1-a69d3a320431"/>
+			</line>
+			<staticText>
+				<reportElement x="0" y="1" width="100" height="20" uuid="37f24bb9-30e7-4c7f-b551-f1ee83110e44"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Número]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="123" y="1" width="56" height="20" uuid="d1a4f5c0-a94e-4cff-be75-fc79a6a47164"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Piso]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="205" y="1" width="100" height="20" uuid="f8fd7230-7b70-4690-940d-145d74fb7488"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Características]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="439" y="1" width="100" height="20" uuid="6ad997fb-7835-4682-9a18-47265b9c1afe"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Precio]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="34">
+			<textField>
+				<reportElement x="0" y="0" width="100" height="20" uuid="ec0a8c87-46aa-4b85-bcd6-2870fbc66a18"/>
+				<textFieldExpression><![CDATA[$F{habitacion_numero}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="123" y="0" width="56" height="20" uuid="2d614750-ac5f-49d4-b453-e0a59659eab0"/>
+				<textFieldExpression><![CDATA[$F{habitacion_piso}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="205" y="0" width="206" height="20" uuid="958cd05e-1e67-42c1-92fc-7d6ca68fc610"/>
+				<textFieldExpression><![CDATA[$F{habitacion_caracteristicas}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="439" y="0" width="100" height="20" uuid="fc1b36ce-82fb-4d2c-afcb-bec7ea522feb"/>
+				<textFieldExpression><![CDATA[$F{habitacion_precio_diario}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6" uuid="31c9f8eb-a5bb-4232-a9a8-defc09ab5300"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Página "+$V{PAGE_NUMBER}+" de"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6" uuid="ace0dec8-d9a0-4c62-a1d3-2d8ae8516637"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="0" y="4" width="100" height="13" uuid="c7f03c65-8cc8-41cc-a17f-c7e0d6d428ae"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>
