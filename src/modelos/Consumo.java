@@ -33,10 +33,10 @@ public class Consumo {
         return idReserva;
     }
 
-    public int setIdreserva(int idReserva) {
+    public void setIdreserva(int idReserva) {
         this.idReserva = idReserva;
     }
-
+    
     public int getIdproducto() {
         return idProducto;
     }
