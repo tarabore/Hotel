@@ -666,7 +666,7 @@ public class PagoForm extends javax.swing.JFrame {
                 habitacionDAO.desocupar(habitacion);
                 ReservaDAO reservaDAO = new ReservaDAO();
                 Reserva reserva = new Reserva();
-                reserva.setIdreserva(Integer.parseInt(txtIdReserva.getText()));
+                reserva.setIdReserva(Integer.parseInt(txtIdReserva.getText()));
                 reservaDAO.pagar(reserva);
             }
         }else if (accion.equals("editar")){
