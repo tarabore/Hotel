@@ -221,12 +221,12 @@ public class InicioForm extends javax.swing.JFrame {
     }//GEN-LAST:event_mniHabitacionesActionPerformed
 
     private void mniProductosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniProductosActionPerformed
-/**
+
         ProductoForm form = new ProductoForm();
         pnlEscritorio.add(form);
         form.toFront();
         form.setVisible(true);
-**/
+
     }//GEN-LAST:event_mniProductosActionPerformed
 
     private void mniClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniClientesActionPerformed
