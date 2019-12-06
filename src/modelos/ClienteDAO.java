@@ -18,12 +18,12 @@ public class ClienteDAO {
         String [] registro = new String[10];
         totalRegistros = 0;
         modelo = new DefaultTableModel(null, titulos);
-        sSQL = "select p.idpersona,p.nombre,p.apaterno,p.amaterno,p.tipo_documento,p.num_documento,"
-                + "p.direccion, p.telefono, p.email,c.codigo_cliente "
-                + "from persona p inner join cliente c on p.idpersona=c.idpersona"
-                + "where concat(p.apaterno,'',p.nombre)like '%"
+        sSQL = "select p.idpersona, p.nombre, p.apaterno, p.amaterno, p.tipo_documento, p.num_documento, "
+                + "p.direccion, p.telefono, p.email, c.codigo_cliente "
+                + "from persona p inner join cliente c on p.idpersona=c.idpersona "
+                + "where concat(p.apaterno, ' ', p.nombre) like '%"
                 + buscar
-                + "%' order by 3,2";
+                + "%' order by 3, 2";
         try{
             Statement st = cn.createStatement();
             ResultSet rs = st.executeQuery(sSQL);
@@ -48,10 +48,10 @@ public class ClienteDAO {
             }
         }
     public boolean insertar(Cliente dts){
-        sSQL = "insert into persona(nombre,apaterno,amaterno,tipo_documento,num_documento,direccion,telefono,email)"
-                +"values(?,?,?,?,?,?,?,?)";
-        sSQL2 = "insert into cliente(idpersona, codigo_cliente)"
-                +"values((select idpersona from persona order by idpersona desc limit1),?)";
+        sSQL = "insert into persona(nombre, apaterno, amaterno, tipo_documento, num_documento, direccion, telefono, email) "
+                + "values(?,?,?,?,?,?,?,?)";
+        sSQL2 = "insert into cliente(idpersona, codigo_cliente) "
+                + "values((select idpersona from persona order by idpersona desc limit 1), ?)";
         try{
             PreparedStatement pst = cn.prepareStatement(sSQL);
             PreparedStatement pst2 = cn.prepareStatement(sSQL2);
@@ -83,8 +83,8 @@ public class ClienteDAO {
     public boolean editar(Cliente dts){
         sSQL = "update persona set nombre=?,apaterno=?,amaterno=?,tipo_documento=?,num_documento=?,"
 + "direccion=?, telefono=?, email=? where idpersona=?";
-        sSQL2 = "update cliente set codigo_cliente=?"
-                +"where idpersona=?";
+        sSQL2 = "update cliente set codigo_cliente=? "
+                + "where idpersona=?";
         try{
             PreparedStatement pst = cn.prepareStatement(sSQL);
             PreparedStatement pst2 = cn.prepareStatement(sSQL2);

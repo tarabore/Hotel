@@ -230,12 +230,12 @@ public class InicioForm extends javax.swing.JFrame {
     }//GEN-LAST:event_mniProductosActionPerformed
 
     private void mniClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniClientesActionPerformed
-/**
+
         ClienteForm form = new ClienteForm();
         pnlEscritorio.add(form);
         form.toFront();
         form.setVisible(true);
-**/
+
     }//GEN-LAST:event_mniClientesActionPerformed
 
     private void mniUsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniUsuariosActionPerformed
