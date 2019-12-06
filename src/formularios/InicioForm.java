@@ -262,12 +262,12 @@ public class InicioForm extends javax.swing.JFrame {
     }//GEN-LAST:event_mniReservasActionPerformed
 
     private void mniPagosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniPagosActionPerformed
-/**
+
         PagoForm form = new PagoForm();
         pnlEscritorio.add(form);
         form.toFront();
         form.setVisible(true);
-**/
+
     }//GEN-LAST:event_mniPagosActionPerformed
 
     /**
