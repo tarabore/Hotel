@@ -21,12 +21,10 @@ public class TrabajadorDAO {
         String[] registro = new String[14];
         totalRegistros = 0;
         modelo = new DefaultTableModel(null, titulos);
-        sSQL = "select p.idpersona, p.nombre, p.apaterno, p.amaterno, " 
-                + "p.tipo_documento, p.num_documento, "
-                + "p.direccion, p.telefono, p.email, "
-                + "t.sueldo, t.acceso, t.login, t.password, t.estado "
-                + "from persona p inner join trabajador t on p.idpersona = t.idpersona "
-                + "where concat(p.apaterno, ' ', p.nombre) like '%" + buscar + "%' "
+        sSQL = "select p.idpersona, p.nombre, p.apaterno, p.amaterno, p.tipo_documento, p.num_documento,"
+                + "p.direccion, p.telefono, p.email, t.sueldo, t.acceso, t.login, t.password, t.estado "
+                + "from persona p inner join trabajador t on p.idpersona = t.idpersona"
+                + "where concat(p.apaterno, ' ',p.nombre) like '%" + buscar + "%' " 
                 + "order by p.apaterno, p.nombre";
         try {
             Statement st = cn.createStatement();

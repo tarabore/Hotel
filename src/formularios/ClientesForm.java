@@ -1,35 +1,35 @@
-
 package formularios;
+
 import modelos.ClienteDAO;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 public class ClientesForm extends javax.swing.JFrame {
 
-
     public ClientesForm() {
         initComponents();
         mostrar("");
         this.setLocationRelativeTo(null);
     }
+
     void ocultar_columnas() {
         tblListado.getColumnModel().getColumn(0).setMaxWidth(0);
         tblListado.getColumnModel().getColumn(0).setMinWidth(0);
         tblListado.getColumnModel().getColumn(0).setPreferredWidth(0);
     }
-    void mostrar(String buscar){
-        try{
+
+    void mostrar(String buscar) {
+        try {
             DefaultTableModel modelo;
             ClienteDAO clienteDAO = new ClienteDAO();
             modelo = clienteDAO.mostrar(buscar);
             tblListado.setModel(modelo);
             ocultar_columnas();
-            lblTotalRegistros.setText("Total Registros"+ Integer.toString(clienteDAO.totalRegistros));
-        }catch(Exception e){
-            JOptionPane.showConfirmDialog(rootPane,e);
+            lblTotalRegistros.setText("Total Registros" + Integer.toString(clienteDAO.totalRegistros));
+        } catch (Exception e) {
+            JOptionPane.showConfirmDialog(rootPane, e);
         }
     }
-
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -72,6 +72,11 @@ public class ClientesForm extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        tblListado.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                tblListadoMousePressed(evt);
+            }
+        });
         scrListado.setViewportView(tblListado);
 
         lblTotalRegistros.setText("registros");
@@ -151,18 +156,19 @@ public class ClientesForm extends javax.swing.JFrame {
     private void jLabel1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MousePressed
         // TODO add your handling code here:
     }//GEN-LAST:event_jLabel1MousePressed
-private void tblListadoMousePressed(java.awt.event.MouseEvent evt){
-    if(evt.getClickCount() == 2){
-        int fila = tblListado.getSelectedRow();
-        String cod;
-        String valor;
-        cod = tblListado.getValueAt(fila, 0).toString();
-        valor = tblListado.getValueAt(fila, 1).toString()+ "" +tblListado.getValueAt(fila,2).toString();
-        ReservaForm.txtIdCliente.setText(cod);
-        ReservaForm.txtCliente.setText(valor);
-        this.dispose();
-    }
-}
+
+    private void tblListadoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblListadoMousePressed
+        if (evt.getClickCount() == 2) {
+            int fila = tblListado.getSelectedRow();
+            String cod;
+            String valor;
+            cod = tblListado.getValueAt(fila, 0).toString();
+            valor = tblListado.getValueAt(fila, 1).toString() + "" + tblListado.getValueAt(fila, 2).toString();
+            ReservaForm.txtIdCliente.setText(cod);
+            ReservaForm.txtCliente.setText(valor);
+            this.dispose();
+        }
+    }//GEN-LAST:event_tblListadoMousePressed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
