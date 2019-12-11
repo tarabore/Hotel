@@ -782,10 +782,10 @@ public class ReservaForm extends javax.swing.JInternalFrame {
     public static javax.swing.JTextField txtCliente;
     private javax.swing.JTextField txtCosto;
     public static javax.swing.JTextField txtIdCliente;
-    public javax.swing.JTextField txtIdHabitacion;
+    public static javax.swing.JTextField txtIdHabitacion;
     private javax.swing.JTextField txtIdReserva;
     public static javax.swing.JTextField txtIdTrabajador;
-    private javax.swing.JTextField txtNumHabitacion;
+    public static javax.swing.JTextField txtNumHabitacion;
     private javax.swing.JTextField txtTrabajador;
     // End of variables declaration//GEN-END:variables
 }
