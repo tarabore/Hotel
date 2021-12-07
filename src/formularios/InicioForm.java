@@ -212,30 +212,30 @@ public class InicioForm extends javax.swing.JFrame {
     }//GEN-LAST:event_mniAyudaActionPerformed
 
     private void mniHabitacionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniHabitacionesActionPerformed
-
+    /*
         HabitacionForm form = new HabitacionForm();
         pnlEscritorio.add(form);
         form.toFront();
         form.setVisible(true);
-
+    */
     }//GEN-LAST:event_mniHabitacionesActionPerformed
 
     private void mniProductosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniProductosActionPerformed
-
+    /*
         ProductoForm form = new ProductoForm();
         pnlEscritorio.add(form);
         form.toFront();
         form.setVisible(true);
-
+    */
     }//GEN-LAST:event_mniProductosActionPerformed
 
     private void mniClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniClientesActionPerformed
-
+    /*
         ClienteForm form = new ClienteForm();
         pnlEscritorio.add(form);
         form.toFront();
         form.setVisible(true);
-
+    */
     }//GEN-LAST:event_mniClientesActionPerformed
 
     private void mniUsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniUsuariosActionPerformed
@@ -262,12 +262,12 @@ public class InicioForm extends javax.swing.JFrame {
     }//GEN-LAST:event_mniReservasActionPerformed
 
     private void mniPagosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniPagosActionPerformed
-
+    /*
         PagoForm form = new PagoForm();
         pnlEscritorio.add(form);
         form.toFront();
         form.setVisible(true);
-
+    */
     }//GEN-LAST:event_mniPagosActionPerformed
 
     /**
