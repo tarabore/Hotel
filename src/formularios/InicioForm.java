@@ -78,6 +78,11 @@ public class InicioForm extends javax.swing.JFrame {
         mnuArchivo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/Archivo.png"))); // NOI18N
         mnuArchivo.setMnemonic('e');
         mnuArchivo.setText("Archivo");
+        mnuArchivo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnuArchivoActionPerformed(evt);
+            }
+        });
 
         mniHabitaciones.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_H, java.awt.event.InputEvent.CTRL_MASK));
         mniHabitaciones.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/habitaciones.png"))); // NOI18N
@@ -221,12 +226,10 @@ public class InicioForm extends javax.swing.JFrame {
     }//GEN-LAST:event_mniHabitacionesActionPerformed
 
     private void mniProductosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniProductosActionPerformed
-    /*
         ProductoForm form = new ProductoForm();
         pnlEscritorio.add(form);
         form.toFront();
         form.setVisible(true);
-    */
     }//GEN-LAST:event_mniProductosActionPerformed
 
     private void mniClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniClientesActionPerformed
@@ -269,6 +272,10 @@ public class InicioForm extends javax.swing.JFrame {
         form.setVisible(true);
     */
     }//GEN-LAST:event_mniPagosActionPerformed
+
+    private void mnuArchivoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuArchivoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_mnuArchivoActionPerformed
 
     /**
      * @param args the command line arguments

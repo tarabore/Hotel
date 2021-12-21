@@ -3,14 +3,15 @@ package modelos;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 public class TrabajadorDAO {
 
-    private Conexion mysql = new Conexion();
-    private Connection cn = mysql.conectar();
+    private final Conexion mysql = new Conexion();
+    private final Connection cn = mysql.conectar();
     private String sSQL = "";
     private String sSQL2 = "";
     public Integer totalRegistros;
@@ -21,9 +22,11 @@ public class TrabajadorDAO {
         String[] registro = new String[14];
         totalRegistros = 0;
         modelo = new DefaultTableModel(null, titulos);
-        sSQL = "select p.idpersona,p.nombre,p.apaterno,p.amaterno,p.tipo_documento,p.num_documento,"
-                + "p.direccion,p.telefono,p.email,t.sueldo,t.acceso,t.login,t.password,t.estado from persona p inner join Trabajador t "
-                + "on p.idpersona=t.idpersona where num_documento like '%" + buscar + "%' order by idpersona desc";
+        sSQL = "select p.idpersona, p.nombre, p.apaterno, p.amaterno, p.tipo_documento, p.num_documento,"
+                + "p.direccion, p.telefono, p.email, t.sueldo, t.acceso, t.login, t.password, t.estado "
+                + "from persona p inner join trabajador t on p.idpersona = t.idpersona "
+                + "where concat(p.apaterno, ' ', p.nombre) like '%" + buscar + "%' "
+                + "order by p.apaterno, p.nombre";
         try {
             Statement st = cn.createStatement();
             ResultSet rs = st.executeQuery(sSQL);
@@ -46,7 +49,7 @@ public class TrabajadorDAO {
                 modelo.addRow(registro);
             }
             return modelo;
-        } catch (Exception e) {
+        } catch (SQLException e) {
             JOptionPane.showConfirmDialog(null, e);
             return null;
         }
@@ -84,7 +87,7 @@ public class TrabajadorDAO {
             } else {
                 return false;
             }
-        } catch (Exception e) {
+        } catch (SQLException e) {
             JOptionPane.showConfirmDialog(null, e);
             return false;
         }
