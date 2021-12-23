@@ -56,7 +56,7 @@ public class ClientesForm extends javax.swing.JFrame {
         jInternalFrame1.setVisible(true);
 
         pnlListado.setBackground(new java.awt.Color(255, 255, 102));
-        pnlListado.setBorder(javax.swing.BorderFactory.createTitledBorder(null));
+        pnlListado.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder("Listado de Clientes"), "Listado de clientes\n"));
         pnlListado.setForeground(new java.awt.Color(255, 255, 255));
         pnlListado.setPreferredSize(new java.awt.Dimension(600, 500));
 
@@ -127,7 +127,7 @@ public class ClientesForm extends javax.swing.JFrame {
                 .addComponent(btnEliminar)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnSalir)
-                .addContainerGap(496, Short.MAX_VALUE))
+                .addContainerGap(492, Short.MAX_VALUE))
             .addComponent(scrListado)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlListadoLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -146,7 +146,7 @@ public class ClientesForm extends javax.swing.JFrame {
                     .addComponent(btnSalir))
                 .addGap(18, 18, 18)
                 .addComponent(scrListado, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
                 .addComponent(lblTotalRegistros))
         );
 

@@ -71,7 +71,11 @@
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                <TitledBorder title="Listado de clientes&#xa;"/>
+                <TitledBorder title="Listado de clientes&#xa;">
+                  <Border PropertyName="innerBorder" info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                    <TitledBorder title="Listado de Clientes"/>
+                  </Border>
+                </TitledBorder>
               </Border>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -96,7 +100,7 @@
                       <Component id="btnEliminar" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="btnSalir" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="496" max="32767" attributes="0"/>
+                      <EmptySpace pref="492" max="32767" attributes="0"/>
                   </Group>
                   <Component id="scrListado" alignment="0" max="32767" attributes="0"/>
                   <Group type="102" alignment="1" attributes="0">
@@ -119,7 +123,7 @@
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="scrListado" min="-2" pref="199" max="-2" attributes="0"/>
-                      <EmptySpace pref="48" max="32767" attributes="0"/>
+                      <EmptySpace pref="43" max="32767" attributes="0"/>
                       <Component id="lblTotalRegistros" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
